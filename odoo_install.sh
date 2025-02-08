@@ -26,7 +26,7 @@ IS_ENTERPRISE="True"
 # Install PostgreSQL 16
 INSTALL_POSTGRESQL_SIXTEEN="True"
 # Set this to True if you want to install Nginx!
-INSTALL_NGINX="False"
+INSTALL_NGINX="True"
 # Set the superadmin password - if GENERATE_RANDOM_PASSWORD is set to "True" we will automatically generate a random password, otherwise we use this one
 OE_SUPERADMIN="admin"
 # Set to "True" to generate a random password, "False" to use the variable in OE_SUPERADMIN
