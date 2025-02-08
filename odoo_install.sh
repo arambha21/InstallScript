@@ -120,8 +120,6 @@ pip3 install -r https://github.com/odoo/odoo/raw/${OE_VERSION}/requirements.txt
 echo -e "\n==== Installing ODOO Server ===="
 sudo git clone --depth 1 --branch $OE_VERSION https://www.github.com/odoo/odoo $OE_HOME_EXT/
 
-if [ $IS_ENTERPRISE = "True" ]; then
-    # Odoo Enterprise install!
     pip3 install psycopg2-binary pdfminer.six
     echo -e "\n--- Create symlink for node"
     sudo ln -s /usr/bin/nodejs /usr/bin/node
@@ -136,7 +134,6 @@ if [ $IS_ENTERPRISE = "True" ]; then
     pip3 install num2words ofxparse dbfread ebaysdk firebase_admin pyOpenSSL python-stdnum==1.20 phonenumbers
     sudo npm install -g less
     sudo npm install -g less-plugin-clean-css
-fi
 
 echo -e "\n---- Create custom module directory ----"
 sudo su $OE_USER -c "mkdir $OE_HOME/custom"
